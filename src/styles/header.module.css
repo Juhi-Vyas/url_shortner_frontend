@@ -1,124 +1,96 @@
-/* Header Container */
+/* header.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
+
 .containerHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    position: relative;
-    z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: #fff;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  font-family: 'DM Sans', sans-serif;
 }
 
-/* Logo Section */
+/* Logo */
 .logoSection h2 {
-    font-size: 26px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #EB568E 0%, #144EE3 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #111;
+  margin: 0;
 }
 
-.logoSection h2::after {
-    content: '®';
-    font-size: 10px;
-    position: absolute;
-    top: 0;
-    right: -12px;
-    background: linear-gradient(135deg, #EB568E 0%, #144EE3 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logoSection h2::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1D9E75;
+  margin-bottom: 2px;
 }
 
-/* Auth Section */
+/* Auth section */
 .authSection {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+/* Greeting */
+.authSection span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Buttons — base */
 .authSection button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
 
-/* Login Button */
-.authSection button:first-child {
-    background: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+.authSection button:hover {
+  background: #f5f5f5;
+  border-color: rgba(0, 0, 0, 0.35);
 }
 
-.authSection button:first-child:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-.authSection button:first-child svg {
-    font-size: 18px;
-}
-
-/* Signup Button */
+/* Register / signup button */
 .signup {
-    background: linear-gradient(135deg, #144EE3 0%, #1e5af5 100%);
-    border: none !important;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(20, 78, 227, 0.3);
+  background: #111 !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  font-weight: 500 !important;
 }
 
 .signup:hover {
-    background: linear-gradient(135deg, #1e5af5 0%, #2563eb 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(20, 78, 227, 0.4);
+  opacity: 0.82;
+  background: #111 !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .containerHeader {
-        padding: 14px 20px;
-    }
-
-    .logoSection h2 {
-        font-size: 22px;
-    }
-
-    .authSection button {
-        padding: 10px 18px;
-        font-size: 13px;
-    }
+/* Logout button */
+.logout {
+  border-color: #F0997B !important;
+  color: #993C1D !important;
 }
 
-@media (max-width: 480px) {
-    .containerHeader {
-        padding: 12px 16px;
-    }
-
-    .logoSection h2 {
-        font-size: 18px;
-    }
-
-    .authSection {
-        gap: 8px;
-    }
-
-    .authSection button {
-        padding: 8px 14px;
-        font-size: 12px;
-    }
-
-    .authSection button:first-child span {
-        display: none;
-    }
+.logout:hover {
+  background: #FAECE7 !important;
 }
